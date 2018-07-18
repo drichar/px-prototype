@@ -47,8 +47,14 @@
   padding-left: 1.5rem;
   color: white;
 
-  > * {
+  h4 {
     margin: 0;
+
+    span {
+      font-weight: 300;
+      color: hsla(0,0,100,0.5);
+      margin-right: 0.25rem;
+    }
   }
 }
 
@@ -100,7 +106,7 @@
 
 .px-order {
   display: grid;
-  grid-template-columns: 1fr auto;
+  grid-template-rows: 1fr auto;
   height: calc(100vh - 4rem);
 
   .px-order-main {
@@ -137,9 +143,11 @@
     }
   }
 
-  .px-order-playlist {
-    width: 15rem;
-    background: hsla(0,0,0,0.75);
-    overflow-y: auto;
+  .px-order-navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
   }
 }

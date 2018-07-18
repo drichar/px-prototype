@@ -155,7 +155,7 @@
       }
     }
 
-    .px-order-localization-grid {
+    .px-order-grid {
       display: grid;
       grid-template: auto / 1fr 1fr;
       grid-gap: 1rem;
@@ -164,10 +164,10 @@
       @media (min-width: 1600px) {
         grid-template: auto / 1.5fr 1fr 1fr;
       }
-    }
 
-    h3 {
-      grid-column: 1 / -1;
+      h3 {
+        grid-column: 1 / -1;
+      }
     }
 
     .px-order-details {
@@ -187,10 +187,16 @@
       }
     }
 
-    .px-order-usage-grid {
-      display: grid;
-      grid-template: auto / 1fr;
-      grid-gap: 1rem;
+    .px-order-usage {
+      grid-column: 1 / -1;
     }
+  }
+
+  .px-order-navigation {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 1rem;
   }
 }

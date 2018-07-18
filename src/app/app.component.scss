@@ -81,6 +81,24 @@
     }
   }
 
+  .px-sidebar-order-overview {
+    .px-sidebar-order-card {
+      margin: 1rem;
+      border: none;
+      background: hsla(0,0,100,0.1);
+      color: hsla(0,0,100,0.75);
+
+      .card-body {
+        padding: 0.75rem;
+      }
+
+      .card-text {
+        font-size: 0.8rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
   .px-sidebar-order-progress {
     padding: 1.5rem 1rem;
     width: 12rem;

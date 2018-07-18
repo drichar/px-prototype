@@ -13,12 +13,21 @@
   </div>
 
   <div class="px-sidebar">
-    <nav class="nav">
-      <a class="nav-link active" href="#">Localization</a>
-      <a class="nav-link" href="#">Usage</a>
-      <a class="nav-link" href="#">Translation</a>
-      <a class="nav-link" href="#">Review</a>
-    </nav>
+    <div class="px-sidebar-order-overview">
+      <div class="px-sidebar-order-card card">
+        <img class="card-img-top" src="http://placehold.it/640x400/?text=Preview" alt="" />
+        <div class="card-body">
+          <p class="card-text"><strong>Project Name</strong></p>
+          <p class="card-text">Studio Name</p>
+        </div>
+      </div>
+      <nav class="nav">
+        <a class="nav-link active" href="#">Localization</a>
+        <a class="nav-link" href="#">Usage</a>
+        <a class="nav-link" href="#">Translation</a>
+        <a class="nav-link" href="#">Review</a>
+      </nav>
+    </div>
     <div class="px-sidebar-order-progress">
       <p>9 Questions Remaining</p>
       <ngb-progressbar type="info" [value]="10" height=".5rem"></ngb-progressbar>

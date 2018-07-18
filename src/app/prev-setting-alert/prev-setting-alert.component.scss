@@ -1,3 +1,24 @@
-.btn {
-  margin-left: 0.5rem;
+.px-prev-setting-alert {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.px-prev-setting-alert-msg {
+  margin-right: 0.75rem;
+
+  @media (max-width: 1199.98px) {
+    margin: 0.5rem 0.75rem 0.5rem 0;
+  }
+}
+
+.px-prev-setting-alert-btns {
+  display: inline-flex;
+  flex-flow: row nowrap;
+  align-items: center;
+
+  .btn:first-child {
+    margin-right: 0.5rem;
+  }
 }

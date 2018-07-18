@@ -1,3 +1,5 @@
+@import '~bootstrap/scss/bootstrap';
+
 .px-grid {
   display: grid;
   grid-template-columns: 4rem auto 1fr;
@@ -136,19 +138,38 @@
     overflow-y: auto;
     padding: 1.5rem;
 
-    h3 {
-      margin-bottom: 1.5rem;
+    .px-order-localization-grid {
+      display: grid;
+      grid-template: auto / 1fr 1fr;
+      grid-gap: 1rem;
+
+      @media (min-width: 1600px) {
+        grid-template: auto / 1.5fr 1fr 1fr;
+      }
     }
 
-    .card-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-gap: 1rem;
+    h3 {
+      grid-column: 1 / -1;
+    }
+
+    .px-order-details {
+      grid-column: 1 / -1;
+
+      @media (min-width: 1600px) {
+        grid-column: auto;
+      }
+    }
+
+    .px-order-subtitling,
+    .px-order-tags {
+      grid-column: 1 / -1;
+
+      @media (min-width: 1200px) {
+        grid-column: auto;
+      }
     }
 
     .card {
-      margin-bottom: 1rem;
-
       .card-header {
         display: flex;
         flex-flow: row nowrap;

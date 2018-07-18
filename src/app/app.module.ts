@@ -6,11 +6,13 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 import { PrevSettingAlertComponent } from './prev-setting-alert/prev-setting-alert.component';
+import { UsageModalComponent } from './usage-modal/usage-modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PrevSettingAlertComponent
+    PrevSettingAlertComponent,
+    UsageModalComponent
   ],
   imports: [
     BrowserModule,

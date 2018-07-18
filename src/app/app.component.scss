@@ -189,6 +189,24 @@
 
     .px-order-usage {
       grid-column: 1 / -1;
+
+      @media (min-width: 1600px) {
+        grid-column: 1 / -2;
+      }
+
+      .px-order-usage-grid {
+        display: grid;
+        grid-template: auto / auto 1fr;
+        grid-gap: 1rem;
+
+        @media (min-width: 1200px) {
+          grid-template: auto / repeat(3, auto 1fr);
+        }
+
+        p {
+          color: hsla(0,0,0,0.5);
+        }
+      }
     }
   }
 

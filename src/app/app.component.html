@@ -1,20 +1,143 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<div class="px-grid">
+  <div class="px-menu">
+    <nav class="nav flex-column">
+      <a class="nav-link" href="#">
+        <svg viewBox="0 0 24 24">
+          <path d="M24 3.752l-4.423-3.752-7.771 9.039-7.647-9.008-4.159 4.278c2.285 2.885 5.284 5.903 8.362 8.708l-8.165 9.447 1.343 1.487c1.978-1.335 5.981-4.373 10.205-7.958 4.304 3.67 8.306 6.663 10.229 8.006l1.449-1.278-8.254-9.724c3.287-2.973 6.584-6.354 8.831-9.245z"/>
+        </svg>
+      </a>
+      <a class="nav-link" href="#" *ngFor="let item of [1,2,3,4,5,6,7,8]">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/></svg>
+      </a>
+    </nav>
+  </div>
 
+  <div class="px-sidebar">
+    <nav class="nav">
+      <a class="nav-link active" href="#">Localization</a>
+      <a class="nav-link" href="#">Usage</a>
+      <a class="nav-link" href="#">Translation</a>
+      <a class="nav-link" href="#">Review</a>
+    </nav>
+    <div class="px-sidebar-order-progress">
+      <p>9 Questions Remaining</p>
+      <ngb-progressbar type="info" [value]="10" height=".5rem"></ngb-progressbar>
+    </div>
+  </div>
+
+  <div class="px-main">
+    <div class="px-header">
+      <h4>Place an Order</h4>
+      <nav class="nav">
+        <a class="nav-link" href="#" *ngFor="let item of [1,2,3,4,5]">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="12"/></svg>
+        </a>
+      </nav>
+    </div>
+    <div class="px-content">
+
+      <div class="px-order">
+        <div class="px-order-main">
+          <h3>Glossy Bastard Int'l 20</h3>
+
+          <div class="card">
+            <div class="card-header">Order Details</div>
+            <div class="card-body">
+              <form>
+                <div class="form-group row">
+                  <div class="col">
+                    <label for="input1">Language</label>
+                    <select id="input1" class="form-control">
+                      <option selected>Select Language&hellip;</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="input2">Territory</label>
+                    <select id="input2" class="form-control">
+                      <option selected>Select Territory&hellip;</option>
+                    </select>
+                  </div>
+                  <div class="col">
+                    <label for="input3">Due Date</label>
+                    <div class="input-group">
+                      <input class="form-control" placeholder="yyyy-mm-dd"
+                             name="dp" [(ngModel)]="dueDate" ngbDatepicker #d="ngbDatepicker">
+                      <div class="input-group-append">
+                        <button class="btn btn-primary" (click)="d.toggle()" type="button">
+                          <fa name="calendar"></fa>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="card-row">
+            <div class="card">
+              <div class="card-header">
+                <span>Subtitling</span>
+                <label for="">Automate <input type="checkbox"></label>
+              </div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group row">
+                    <label for="input4" class="col-sm-4 col-form-label">Dialogue</label>
+                    <div class="col-sm-8">
+                      <select id="input4" class="form-control">
+                        <option selected>Subtitled</option>
+                        <option>Subtitled</option>
+                        <option>Subtitled</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input5" class="col-sm-4 col-form-label">Narration</label>
+                    <div class="col-sm-8">
+                      <select id="input5" class="form-control">
+                        <option selected>Dedicated</option>
+                        <option>Dedicated</option>
+                        <option>Dedicated</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="input6" class="col-sm-4 col-form-label">Graphics</label>
+                    <div class="col-sm-8">
+                      <select id="input6" class="form-control">
+                        <option selected>OV</option>
+                        <option>OV</option>
+                        <option>OV</option>
+                      </select>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="card-header">Tags</div>
+              <div class="card-body">
+                <form>
+                  <div class="form-group row">
+                    <div class="col-sm-9">
+                      <input type="text" class="form-control" placeholder="Enter Tag">
+                    </div>
+                    <button class="btn btn-primary" type="button">Delete</button>
+                  </div>
+                  <button class="btn btn-primary" type="button">Add Tag</button>
+                </form>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- <div class="px-order-playlist"></div> -->
+
+      </div>
+
+    </div>
+  </div>
+</div>

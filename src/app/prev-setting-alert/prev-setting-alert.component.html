@@ -1,0 +1,7 @@
+<p *ngFor="let alert of alerts">
+  <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">
+    Would you like to apply settings from your previous order?
+    <button class="btn btn-secondary btn-sm">View Settings</button>
+    <button class="btn btn-primary btn-sm">Apply Settings</button>
+  </ngb-alert>
+</p>

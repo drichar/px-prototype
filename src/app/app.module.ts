@@ -5,10 +5,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
+import { PrevSettingAlertComponent } from './prev-setting-alert/prev-setting-alert.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PrevSettingAlertComponent
   ],
   imports: [
     BrowserModule,

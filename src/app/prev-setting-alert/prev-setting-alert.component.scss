@@ -36,6 +36,7 @@
 .px-order-presets {
   display: grid;
   grid-template: auto / auto 1fr;
+  grid-gap: 0.5rem;
 
   span {
     padding: 0 0.5rem;

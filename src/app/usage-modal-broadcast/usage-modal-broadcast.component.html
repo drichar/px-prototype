@@ -1,0 +1,48 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Broadcast Settings</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('X click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="broadcastSetting1">
+          <label class="form-check-label" for="broadcastSetting1">SD 4:3 PAL</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="broadcastSetting2">
+          <label class="form-check-label" for="broadcastSetting2">SD 16:9 PAL</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="broadcastSetting3">
+          <label class="form-check-label" for="broadcastSetting3">SD 4:3 NTSC</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="broadcastSetting4">
+          <label class="form-check-label" for="broadcastSetting4">SD 16:9 NTSC</label>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" value="" id="broadcastSetting5">
+          <label class="form-check-label" for="broadcastSetting5">HD 2398</label>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" aria-label="Cancel" (click)="d('Cancel click')">Cancel</button>
+    <button type="button" class="btn btn-primary" aria-label="Save" (click)="c('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-primary" (click)="open(content)">Settings</button>

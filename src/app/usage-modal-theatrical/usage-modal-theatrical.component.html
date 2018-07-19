@@ -1,0 +1,66 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Theatrical Settings</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('X click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">D/L Link</th>
+            <th scope="col">Ship USB</th>
+            <th scope="col">Recipients</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">2D Flat</th>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="text" class="form-control" value="phil@pixwel.com, doug@pixwel.com"></td>
+          </tr>
+          <tr>
+            <th scope="row">2D Scope</th>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <th scope="row">2D Combo</th>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <th scope="row">3D Flat</th>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="text" class="form-control"></td>
+          </tr>
+          <tr>
+            <th scope="row">3D Scope</th>
+            <td><input type="checkbox" checked></td>
+            <td><input type="checkbox" checked></td>
+            <td><input type="text" class="form-control" value="james@pixwel.com, grayson@pixwel.com"></td>
+          </tr>
+          <tr>
+            <th scope="row">3D Combo</th>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="text" class="form-control"></td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" aria-label="Cancel" (click)="d('Cancel click')">Cancel</button>
+    <button type="button" class="btn btn-primary" aria-label="Save" (click)="c('Save click')">Save</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-primary" (click)="open(content)">Settings</button>

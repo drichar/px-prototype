@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { UsageModalComponent } from './usage-modal.component';
+import { UsageModalOnlineComponent } from './usage-modal-online.component';
 
-describe('UsageModalComponent', () => {
-  let component: UsageModalComponent;
-  let fixture: ComponentFixture<UsageModalComponent>;
+describe('UsageModalOnlineComponent', () => {
+  let component: UsageModalOnlineComponent;
+  let fixture: ComponentFixture<UsageModalOnlineComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ UsageModalComponent ]
+      declarations: [ UsageModalOnlineComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(UsageModalComponent);
+    fixture = TestBed.createComponent(UsageModalOnlineComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

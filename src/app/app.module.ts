@@ -6,15 +6,19 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 import { PrevSettingAlertComponent } from './prev-setting-alert/prev-setting-alert.component';
-import { UsageModalComponent } from './usage-modal/usage-modal.component';
 import { SubtitlesSettingsComponent } from './subtitles-settings/subtitles-settings.component';
+import { UsageModalBroadcastComponent } from './usage-modal-broadcast/usage-modal-broadcast.component';
+import { UsageModalOnlineComponent } from './usage-modal-online/usage-modal-online.component';
+import { UsageModalTheatricalComponent } from './usage-modal-theatrical/usage-modal-theatrical.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrevSettingAlertComponent,
-    UsageModalComponent,
-    SubtitlesSettingsComponent
+    SubtitlesSettingsComponent,
+    UsageModalBroadcastComponent,
+    UsageModalOnlineComponent,
+    UsageModalTheatricalComponent
   ],
   imports: [
     BrowserModule,

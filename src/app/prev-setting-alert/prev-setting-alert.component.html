@@ -1,6 +1,6 @@
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">View Settings</h4>
+    <h4 class="modal-title" id="modal-basic-title">Select a Preset</h4>
     <button type="button" class="close" aria-label="Close" (click)="d('X click')">
       <span aria-hidden="true">&times;</span>
     </button>
@@ -126,7 +126,7 @@
 <p *ngFor="let alert of alerts">
   <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">
     <div class="px-prev-setting-alert">
-      <span class="px-prev-setting-alert-msg">Would you like to apply settings from your previous order?</span>
+      <span class="px-prev-setting-alert-msg">Would you like to apply settings from a previous order?</span>
       <div class="px-prev-setting-alert-btns">
         <button class="btn btn-info btn-sm" (click)="open(content)">View Settings</button>
       </div>

@@ -46,16 +46,26 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-left: 1.5rem;
+  padding: 0 1.5rem;
   color: white;
 
-  h4 {
+  .px-header-title {
     margin: 0;
+
+    @media (max-width: 767.98px) {
+      font-size: 1.25rem;
+    }
 
     span {
       font-weight: 300;
       color: hsla(0,0,100,0.5);
       margin-right: 0.25rem;
+    }
+  }
+
+  @media (max-width: 799.98px) {
+    .nav {
+      display: none;
     }
   }
 }

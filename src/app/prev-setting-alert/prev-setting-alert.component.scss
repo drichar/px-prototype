@@ -22,7 +22,26 @@
     margin: 0.25rem 0;
   }
 
-  .btn:first-child {
-    margin-right: 0.5rem;
+  .btn:not(:first-child) {
+    margin-left: 0.5rem;
+  }
+}
+
+.px-order-prev-settings {
+  display: grid;
+  grid-template: auto / 1fr 2fr;
+  grid-gap: 1rem;
+}
+
+.px-order-presets {
+  display: grid;
+  grid-template: auto / auto 1fr;
+
+  span {
+    padding: 0 0.5rem;
+
+    &:nth-child(odd) {
+      font-weight: bold;
+    }
   }
 }

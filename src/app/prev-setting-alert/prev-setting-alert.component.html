@@ -1,10 +1,134 @@
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">View Settings</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('X click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <ngb-tabset type="pills" orientation="vertical" class="px-order-prev-settings">
+      <ngb-tab>
+        <ng-template ngbTabTitle>Order #PX123ABC</ng-template>
+        <ng-template ngbTabContent>
+          <div class="px-order-presets">
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle>Custom Preset 1</ng-template>
+        <ng-template ngbTabContent>
+          <div class="px-order-presets">
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle>Custom Preset 2</ng-template>
+        <ng-template ngbTabContent>
+          <div class="px-order-presets">
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+          </div>
+        </ng-template>
+      </ngb-tab>
+      <ngb-tab>
+        <ng-template ngbTabTitle>Custom Preset 3</ng-template>
+        <ng-template ngbTabContent>
+          <div class="px-order-presets">
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+            <span>Longer Key:</span>
+            <span>Longer Value</span>
+            <span>Key:</span>
+            <span>Value</span>
+          </div>
+        </ng-template>
+      </ngb-tab>
+    </ngb-tabset>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-secondary" aria-label="Cancel" (click)="d('Cancel click')">Cancel</button>
+    <button type="button" class="btn btn-primary" aria-label="Save" (click)="c('Save click')">Apply Settings</button>
+  </div>
+</ng-template>
+
 <p *ngFor="let alert of alerts">
   <ngb-alert [type]="alert.type" (close)="closeAlert(alert)">
     <div class="px-prev-setting-alert">
       <span class="px-prev-setting-alert-msg">Would you like to apply settings from your previous order?</span>
       <div class="px-prev-setting-alert-btns">
-        <button class="btn btn-secondary btn-sm">View Settings</button>
-        <button class="btn btn-info btn-sm">Apply Settings</button>
+        <button class="btn btn-secondary btn-sm" (click)="open(content)">View Settings</button>
       </div>
     </div>
   </ngb-alert>

@@ -7,12 +7,14 @@ import { AngularFontAwesomeModule } from 'angular-font-awesome';
 import { AppComponent } from './app.component';
 import { PrevSettingAlertComponent } from './prev-setting-alert/prev-setting-alert.component';
 import { UsageModalComponent } from './usage-modal/usage-modal.component';
+import { SubtitlesSettingsComponent } from './subtitles-settings/subtitles-settings.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PrevSettingAlertComponent,
-    UsageModalComponent
+    UsageModalComponent,
+    SubtitlesSettingsComponent
   ],
   imports: [
     BrowserModule,

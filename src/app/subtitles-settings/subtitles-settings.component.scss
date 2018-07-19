@@ -1,0 +1,43 @@
+@import '~bootstrap/scss/bootstrap';
+
+.card-header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  label {
+    margin-bottom: 0;
+
+    [type='checkbox'] {
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+.card-body {
+  position: relative;
+
+  .px-order-autosubs {
+    position: absolute;
+    top: 0; height: 100%;
+    left: 0; width: 100%;
+    background: white;
+    border-bottom-left-radius: $border-radius;
+    border-bottom-right-radius: $border-radius;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+      width: 5rem;
+      height: 5rem;
+      margin: 1rem;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}

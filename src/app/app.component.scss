@@ -95,6 +95,11 @@
     width: 12rem;
     height: 4rem;
     color: hsla(0,0,100,0.5);
+    cursor: pointer;
+
+    &:hover {
+      color: hsla(0,0,100,0.5);
+    }
 
     &.active {
       color: white;
@@ -139,6 +144,7 @@
   display: grid;
   grid-template-rows: 1fr auto;
   height: calc(100vh - 4rem);
+  position: relative;
 
   .px-order-main {
     overflow-y: auto;

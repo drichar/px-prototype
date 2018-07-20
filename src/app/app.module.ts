@@ -10,6 +10,7 @@ import { SubtitlesSettingsComponent } from './subtitles-settings/subtitles-setti
 import { UsageModalBroadcastComponent } from './usage-modal-broadcast/usage-modal-broadcast.component';
 import { UsageModalOnlineComponent } from './usage-modal-online/usage-modal-online.component';
 import { UsageModalTheatricalComponent } from './usage-modal-theatrical/usage-modal-theatrical.component';
+import { SubtitlerComponent } from './subtitler/subtitler.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { UsageModalTheatricalComponent } from './usage-modal-theatrical/usage-mo
     SubtitlesSettingsComponent,
     UsageModalBroadcastComponent,
     UsageModalOnlineComponent,
-    UsageModalTheatricalComponent
+    UsageModalTheatricalComponent,
+    SubtitlerComponent
   ],
   imports: [
     BrowserModule,

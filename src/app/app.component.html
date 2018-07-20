@@ -22,8 +22,8 @@
         </div>
       </div>
       <nav class="nav">
-        <a class="nav-link active" href="#">Order Details</a>
-        <a class="nav-link" href="#">Translation</a>
+        <a class="nav-link" (click)="hideSubtitler()" [ngClass]="{'active': !isSubtitlerVisible}">Order Details</a>
+        <a class="nav-link" (click)="showSubtitler()" [ngClass]="{'active': isSubtitlerVisible}">Translation</a>
       </nav>
     </div>
   </div>
@@ -151,10 +151,12 @@
             </div>
           </div>
 
+          <px-subtitler *ngIf="isSubtitlerVisible"></px-subtitler>
+
         </div>
 
         <div class="px-order-navigation">
-          <button class="btn btn-primary btn-lg" type="button">Next: Translation</button>
+          <button class="btn btn-primary btn-lg" type="button" (click)="showSubtitler()">Next: Translation</button>
         </div>
 
       </div>

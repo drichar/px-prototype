@@ -9,4 +9,13 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 export class AppComponent {
   title = 'px';
   dueDate = '';
+  isSubtitlerVisible: boolean = false;
+
+  showSubtitler(): void {
+    this.isSubtitlerVisible = true;
+  }
+
+  hideSubtitler(): void {
+    this.isSubtitlerVisible = false;
+  }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'px-subtitler',
@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subtitler.component.scss']
 })
 export class SubtitlerComponent implements OnInit {
+  @ViewChild('subtitler') target;
 
   constructor() { }
 
   ngOnInit() {
+    const element = this.target.nativeElement;
+
+    setTimeout(function() {
+      element.classList.add('visible');
+    }, 0);
   }
 
 }
